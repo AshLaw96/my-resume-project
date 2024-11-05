@@ -1,7 +1,8 @@
-function initMap() {
-    // Ensure that AdvancedMarkerElement is available
-    if (typeof google.maps.marker === 'undefined' || typeof google.maps.marker.AdvancedMarkerElement === 'undefined') {
-        console.error("AdvancedMarkerElement is not defined. Ensure @googlemaps/marker library is loaded.");
+// Define initMap as a global function by attaching it to the window object
+window.initMap = function() {
+    // Check if AdvancedMarkerElement is defined
+    if (typeof google === 'undefined' || typeof google.maps === 'undefined' || typeof google.maps.marker === 'undefined' || typeof google.maps.marker.AdvancedMarkerElement === 'undefined') {
+        console.error("AdvancedMarkerElement is not available. Please ensure the @googlemaps/marker library is loaded.");
         return;
     }
 
@@ -28,7 +29,4 @@ function initMap() {
     });
 
     new markerClusterer.MarkerClusterer({ map, markers });
-}
-
-// Wait until the window has loaded all scripts
-window.addEventListener('load', initMap);
+};

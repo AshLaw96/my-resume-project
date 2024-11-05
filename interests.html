@@ -199,12 +199,12 @@
             </div>
         </div>
     </footer>
-    <!-- Load @googlemaps/marker and @googlemaps/markerclusterer with async and defer -->
-    <script src="https://unpkg.com/@googlemaps/marker@1.1.0/dist/index.min.js" async defer></script>
-    <script src="https://unpkg.com/@googlemaps/markerclusterer@2.0.3/dist/index.min.js" async defer></script>
-
-    <!-- Load Google Maps JavaScript API without callback to control timing -->
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxmfR3ZMtwFnzdeRlFPeqCycoJL3CfWOw" async defer></script>
+    <!-- Load Google Maps JavaScript API with callback -->
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCxmfR3ZMtwFnzdeRlFPeqCycoJL3CfWOw&callback=initMap"></script>
+    <!-- Load @googlemaps/marker and markerclusterer libraries -->
+    <script src="https://unpkg.com/@googlemaps/marker@1.1.0/dist/index.min.js"></script>
+    <script src="https://unpkg.com/@googlemaps/markerclusterer@2.0.3/dist/index.min.js"></script>
+    <!-- Load your custom JavaScript file with initMap definition -->
     <script src="assets/js/maps.js"></script>
     <!-- Font Awesome kit -->
     <script src="https://kit.fontawesome.com/5c8b8e6738.js" crossorigin="anonymous"></script>
